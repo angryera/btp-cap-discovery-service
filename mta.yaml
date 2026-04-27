@@ -1,10 +1,10 @@
 _schema-version: 3.3.0
-ID: task4-discovery
+ID: cap-discovery-ingestion
 version: 1.0.0
-description: CAP discovery ingestion service
+description: CAP discovery ingestion — Node.js OData service, XSUAA, HANA HDI
 
 modules:
-  - name: task4-discovery-srv
+  - name: cap-discovery-ingestion-srv
     type: nodejs
     path: gen/srv
     parameters:
@@ -19,10 +19,10 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: task4-discovery-auth
-      - name: task4-discovery-db
+      - name: cap-discovery-ingestion-auth
+      - name: cap-discovery-ingestion-db
 
-  - name: task4-discovery-db-deployer
+  - name: cap-discovery-ingestion-db-deployer
     type: hdb
     path: gen/db
     parameters:
@@ -32,17 +32,17 @@ modules:
       memory: 256M
       disk-quota: 512M
     requires:
-      - name: task4-discovery-db
+      - name: cap-discovery-ingestion-db
 
 resources:
-  - name: task4-discovery-auth
+  - name: cap-discovery-ingestion-auth
     type: org.cloudfoundry.managed-service
     parameters:
       service: xsuaa
       service-plan: application
       path: xs-security.json
 
-  - name: task4-discovery-db
+  - name: cap-discovery-ingestion-db
     type: com.sap.xs.hdi-container
     parameters:
       service: hana

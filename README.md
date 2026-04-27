@@ -67,13 +67,13 @@ npx cds build --production
 3) Build MTAR:
 
 ```powershell
-npx mbt build -t gen --mtar task4-discovery.mtar
+npx mbt build -t gen --mtar cap-discovery-ingestion.mtar
 ```
 
 4) Deploy MTAR:
 
 ```powershell
-cf deploy gen/task4-discovery.mtar
+cf deploy gen/cap-discovery-ingestion.mtar
 ```
 
 5) Verify:
