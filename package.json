@@ -1,0 +1,49 @@
+{
+  "name": "task4",
+  "version": "1.0.0",
+  "description": "CAP Discovery ingestion service for BTP Trial",
+  "private": true,
+  "scripts": {
+    "start": "cds-serve",
+    "start:prod": "node node_modules/@sap/cds/bin/cds-serve.js",
+    "build": "npx cds build --production",
+    "test": "npx cds compile srv --to json > NUL"
+  },
+  "keywords": [
+    "cap",
+    "btp",
+    "hana"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "cds": {
+    "requires": {
+      "auth": {
+        "kind": "mocked"
+      },
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      }
+    },
+    "[production]": {
+      "requires": {
+        "auth": "xsuaa",
+        "db": "hana"
+      }
+    }
+  },
+  "dependencies": {
+    "@cap-js/hana": "^2.7.1",
+    "@cap-js/sqlite": "^2.2.1",
+    "@sap/cds": "^9.9.0",
+    "@sap/xssec": "^4.13.0",
+    "passport": "^0.7.0"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^9.9.0",
+    "mbt": "^1.2.45"
+  }
+}

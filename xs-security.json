@@ -1,0 +1,19 @@
+{
+  "xsappname": "task4-discovery-${org}-${space}",
+  "tenant-mode": "shared",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.DiscoveryUser",
+      "description": "Allows access to discovery service APIs"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "DiscoveryUser",
+      "description": "Discovery API consumer role",
+      "scope-references": [
+        "$XSAPPNAME.DiscoveryUser"
+      ]
+    }
+  ]
+}

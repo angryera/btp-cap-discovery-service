@@ -1,0 +1,9 @@
+{
+  "odata": {
+    "version": "v4"
+  },
+  "folders": {
+    "db": "db",
+    "srv": "srv"
+  }
+}

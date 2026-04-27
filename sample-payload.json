@@ -1,0 +1,26 @@
+{
+  "systemId": "CUST-PRO-001",
+  "customerName": "Acme Corp",
+  "s4Version": "2023",
+  "scannedAt": "2025-11-01T10:00:00Z",
+  "scopetitems": [
+    {
+      "code": "345",
+      "name": "Procurement of Direct Materials",
+      "isActive": true,
+      "customFields": 4
+    },
+    {
+      "code": "809",
+      "name": "Sell from Stock",
+      "isActive": true,
+      "customFields": 0
+    },
+    {
+      "code": "2TX",
+      "name": "Central Procurement",
+      "isActive": false,
+      "customFields": 12
+    }
+  ]
+}
