@@ -1,5 +1,5 @@
 {
-  "xsappname": "cap-discovery-ingestion-${org}-${space}",
+  "xsappname": "cap-discovery-ingestion",
   "tenant-mode": "shared",
   "scopes": [
     {

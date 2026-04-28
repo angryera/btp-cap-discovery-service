@@ -83,6 +83,10 @@ cf apps
 cf services
 ```
 
+**If XSUAA creation fails** with *Invalid xsappname*: `xsappname` in `xs-security.json` must be a plain string (letters, digits, `-`, `_`, `/` only). Placeholders like `${org}` / `${space}` are not allowed by the XSUAA broker.
+
+**If HANA / HDI creation fails** with *There is no database available* for your space: in BTP cockpit, open your **HANA Cloud** instance and **map** it to the same Cloud Foundry org/space you deploy to (or create a HANA database in that subaccount first). Until a database exists for that space, `hdi-shared` cannot be provisioned.
+
 ## Test calls (examples)
 
 ### POST success

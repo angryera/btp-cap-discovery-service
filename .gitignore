@@ -4,3 +4,4 @@ db.sqlite
 *.mtar
 .env
 .DS_Store
+logs/
